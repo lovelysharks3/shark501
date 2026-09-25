@@ -387,7 +387,7 @@ let 文章列表 = [//{标题:'测试',内容:'测试内容'}]
     作者:'shark',
     类型:'文本'},
     {标题:'广告招租位',
-    内容:'<a href="https://m.fjpit.com/#/pages/student/StudentSchedule/scheduleTable">学校课表</a>',
+    内容:'<a href="https://m.fjpit.com/#/pages/student/StudentSchedule/scheduleTable">学校课表</a>\n<a href="https://superapp.paas.fjpit.cn/pages/tab/my/my">数字福信</a>\n<a href="https://m.fjpit.com/#/">智慧教务</a>',
     作者:'shark',
     类型:'文本'},
 ]
@@ -648,13 +648,13 @@ function 登录切换(){
         document.querySelector('#主页').insertAdjacentHTML("afterbegin",`<button id="用户">${用户名}</button>`);
             document.querySelector('#用户').onclick = function(){刷新()};
             刷新();
-        document.querySelector('#设置按钮').insertAdjacentHTML("afterend",`<button id="发动态">投稿</button>`);
-            document.querySelector('#发动态').onclick = function(){
-            document.querySelector('#主页').style.display='none';
-            document.querySelector('#动态编辑').style.display='flex';
-            document.querySelector('#发动态').style.display='none';
-            document.querySelector('#主页按钮').style.display='block';
-        }},200)
+        // document.querySelector('#设置按钮').insertAdjacentHTML("afterend",`<button id="发动态">投稿</button>`);
+        //     document.querySelector('#发动态').onclick = function(){
+        //     document.querySelector('#主页').style.display='none';
+        //     document.querySelector('#动态编辑').style.display='flex';
+        //     document.querySelector('#发动态').style.display='none';
+        //     document.querySelector('#主页按钮').style.display='block';}
+        },200)
         document.querySelector('#设置按钮').insertAdjacentHTML("afterend",`<button id="主页按钮" style="display:none">主页</button>`);
             document.querySelector('#主页按钮').onclick = 切换主页
         }
