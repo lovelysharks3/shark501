@@ -1,10 +1,12 @@
 {
+    "id": "sharkweb",
+    "description": "数字福信鲨鱼版"
     "name": "鲨鱼福信",
     "short_name": "鲨鱼福信",
     "start_url": "./",
     "scope": "./",
     "display": "standalone",
-    "orientation": "portrait",
+    "orientation": "portrait-primary",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
     "icons": [
