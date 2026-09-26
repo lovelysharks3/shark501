@@ -23,7 +23,7 @@
 }
 @media not ((hover: none) and (pointer: coarse)) {
     h1, h2, h3, h4, h5, h6, span, p {
-        user-select: text;
+        user-select: text!important;
     }
 }
 
@@ -390,9 +390,11 @@ const 音乐= new Audio('./music/!toy.mp3')
     音乐.volume = 0.1
 let 循环播放 = true
 let 文章列表 = [//{标题:'测试',内容:'测试内容'}]
-    {标题:`📌请假提示`,
-    内容:`请假需提前联系老师短信或电话，请假格式如下，回来记得销假
-我是物联网2611XXX的爸爸/妈妈XXX\n我已知晓我孩子将于2026年9月13日14:30时至2026年9月14日18:00时请假离校，目的地: XXX\n离校期间所有责任由学生和家长自负，与学校无关。\n离校原因:XXX\n学生:XXX\n学生联系电话:XXX\n紧急联系人:XXX\n紧急联系电话:XXXX`,
+    {标题:`<span id='复制提示'>📌请假提示(点击文字自动复制)</span>`,
+    内容:`<div onclick='复制文字()' id='复制按钮'><span>\
+请假需提前联系老师短信或电话，请假格式如下，回来记得销假
+我是物联网2611XXX的爸爸/妈妈XXX\n我已知晓我孩子将于2026年9月13日14:30时至2026年9月14日18:00时请假离校\n期间所有责任由学生和家长自负，与学校无关\n目的地:\n离校原因:\n学生:\n学生联系电话:\n紧急联系人:\n紧急联系电话:\
+</span></div>`,
     作者:'shark',
     类型:'文本'},
     {标题:`<div class='横排' style='justify-content: space-between'>
@@ -672,6 +674,12 @@ function 登录切换(){
             document.querySelector('#主页按钮').onclick = 切换主页
         }
     else {alert("错了，笨蛋")}
+}
+function 复制文字(){
+    document.querySelector('#复制按钮').style.pointerEvents = "none";
+    navigator.clipboard.writeText("我是物联网2611XXX的爸爸/妈妈XXX\n我已知晓我孩子将于2026年9月13日14:30时至2026年9月14日18:00时请假离校\n期间所有责任由学生和家长自负，与学校无关\n目的地:\n离校原因:\n学生:\n学生联系电话:\n紧急联系人:\n紧急联系电话:");
+    document.querySelector('#复制提示').innerHTML='📌请假提示(复制成功)';
+    setTimeout(function(){document.querySelector('#复制提示').innerHTML='📌请假提示(点击文字自动复制)';document.querySelector('#复制按钮').style.pointerEvents = "auto";},3000)
 }
 setTimeout(function(){
     登录切换()
