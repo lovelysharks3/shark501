@@ -1,6 +1,6 @@
 {
     "id": "sharkweb",
-    "description": "数字福信鲨鱼版"
+    "description": "数字福信鲨鱼版",
     "name": "鲨鱼福信",
     "short_name": "鲨鱼福信",
     "start_url": "./",
