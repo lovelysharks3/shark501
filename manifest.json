@@ -1,0 +1,22 @@
+{
+    "name": "鲨鱼网站",
+    "short_name": "鲨鱼",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "./shark.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "./shark512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
