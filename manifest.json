@@ -1,6 +1,6 @@
 {
-    "name": "鲨鱼网站",
-    "short_name": "鲨鱼",
+    "name": "鲨鱼福信",
+    "short_name": "鲨鱼福信",
     "start_url": "./",
     "scope": "./",
     "display": "standalone",
