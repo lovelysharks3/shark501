@@ -20,14 +20,10 @@
     padding: 0;
     margin: 0;
     user-select: none;
-    -webkit-user-select: none !important;
-    -webkit-touch-callout: none !important;
 }
-@media (Width > 600px) {
-    h1, h2, h3, h4, h5, h6, span, p {
-        user-select: text !important;
-    }
-}
+/* h1, h2, h3, h4, h5, h6, span, p {
+    user-select: text !important;
+} */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -681,7 +677,7 @@ function 复制文字(){
     document.querySelector('#复制按钮').style.pointerEvents = "none";
     navigator.clipboard.writeText("我是物联网2611XXX的爸爸/妈妈XXX\n我已知晓我孩子将于2026年9月13日14:30时至2026年9月14日18:00时请假离校\n期间所有责任由学生和家长自负，与学校无关\n目的地:\n离校原因:\n学生:\n学生联系电话:\n紧急联系人:\n紧急联系电话:");
     document.querySelector('#复制提示').innerHTML='📌请假提示(复制成功)';
-    setTimeout(function(){document.querySelector('#复制提示').innerHTML='📌请假提示(点击文字自动复制)';document.querySelector('#复制按钮').style.pointerEvents = "auto";},3000)
+    setTimeout(function(){document.querySelector('#复制提示').innerHTML='📌请假提示(点击文字自动复制)';document.querySelector('#复制按钮').style.pointerEvents = "auto";},2500)
 }
 setTimeout(function(){
     登录切换()
